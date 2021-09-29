@@ -1,28 +1,45 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="portfolio">
+    <div id="header">
+      <a href="/">Andrew Sacher</a>
+      <Nav />
+    </div>
+    <div id="profile">
+      <img id="profile-pic" src="./assets/andrew.jpeg" />
+      <span>Hey, I'm Andrew</span>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Nav from "./components/Nav.vue";
 
 export default {
-  name: 'App',
+  name: "Portfolio",
   components: {
-    HelloWorld
-  }
-}
+    Nav,
+  },
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+#header {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+#profile {
+  display: flex;
+  align-content: center;
+}
+#profile-pic {
+  height: 600px;
+  padding: 0px 50px;
 }
 </style>
